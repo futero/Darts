@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Darts.Models
 {
@@ -22,6 +23,8 @@ namespace Darts.Models
         [DataType(DataType.Date)]
         [Display(Name = "Birth date")]
         public DateTime Birthdate { get; set; }
+        //[NotMapped]
+        //public string FullName { get; set; }
 
         public Player()
         {
@@ -35,16 +38,17 @@ namespace Darts.Models
             this.NickName = nickName;
             this.Gender = gender;
             this.Birthdate = birthdate;
+
+           // CreateFullName();
         }
 
         /**
          * Returns the full name of the player.
          */
-        public string GetFullName()
+        /*private void CreateFullName()
         {
-            string result = this.FirstName + " " + this.SurName;
-            return result;
-        }
+            this.FullName = this.FirstName + " " + this.SurName;
+        }*/
 
         /**
          * Returns the age of the player, taking leap years into account

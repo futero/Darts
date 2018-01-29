@@ -10,5 +10,7 @@ namespace Darts.Models
         }
 
         public DbSet<Darts.Models.Player> Player { get; set; }
+        public DbSet<Darts.Models.GameType> GameType { get; set; }
+        //public DbSet<Darts.Models.Match> Match { get; set; }
     }
 }

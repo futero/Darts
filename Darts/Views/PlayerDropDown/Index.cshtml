@@ -1,0 +1,12 @@
+﻿@model Darts.Models.Match;
+
+@{
+    ViewData["Title"] = "Player drop down";
+}
+
+<div class="form-group">
+    <label asp-for="PlayerList" class="col-md-2 control-label"></label>
+    <div class="col-md-10">
+        <select asp-for="PlayerList" asp-items="@Model.PlayerList"></select>
+    </div>
+</div>

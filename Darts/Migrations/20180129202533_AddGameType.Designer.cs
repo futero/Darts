@@ -11,9 +11,10 @@ using System;
 namespace Darts.Migrations
 {
     [DbContext(typeof(DartsContext))]
-    partial class DartsContextModelSnapshot : ModelSnapshot
+    [Migration("20180129202533_AddGameType")]
+    partial class AddGameType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

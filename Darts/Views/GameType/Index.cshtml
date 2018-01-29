@@ -1,0 +1,17 @@
+﻿@model Darts.Models.Match;
+
+@{
+    ViewData["Title"] = "Game type drop down";
+}
+
+<h2>Game type drop down</h2>
+
+<div class="form-group">
+    <label asp-for="GameTypeList" class="col-md-2 control-label"></label>
+    <div class="col-md-10">
+        <select asp-for="GameTypeList" asp-items="@Model.GameTypeList"></select>
+    </div>
+</div>
+
+<!--label>Game type</!--label>
+<select asp-for="ID" asp-items="@(new SelectList(@ViewBag.listofitems, "ID", "Name"))"></select-->
